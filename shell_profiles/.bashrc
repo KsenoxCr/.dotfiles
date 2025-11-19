@@ -138,3 +138,4 @@ fi
 
 alias nv=nvim
 alias fd=fdfind
+alias lg=lazygit
