@@ -15,7 +15,7 @@ set $notes ~/work/scripting/bash/open_app.sh obsidian
 set $browser chromium
 set $chatbots ~/work/scripting/bash/open_app.sh firefox
 set $email ~/work/scripting/bash/open_app.sh thunderbird
-set $screenShot grim -g "$(slurp)" ~/images/screenshots/$(date +%Y%m%d_%H%M%S).png
+set $screenShot grim -g "$(slurp)" - | wl-copy
 set $mainMonitorSS grim -o DP-1 - | wl-copy
 set $lockScreen swaylock -i ~/wallpapers/pepe_windows.jpg
 set $menu rofi -show drun -theme Indego
@@ -40,7 +40,7 @@ input type:keyboard {
 
 input type:pointer {
     accel_profile flat
-    pointer_accel -0.7
+    pointer_accel -0.3
 }
 
 input type:touchpad {
@@ -183,12 +183,12 @@ mode "resize" {
     bindsym l resize grow width 100px
     bindsym k resize shrink height 100px
     bindsym j resize grow height 100px
-    
+
     bindsym Shift+h resize shrink width 20px
     bindsym Shift+l resize grow width 20px
     bindsym Shift+k resize shrink height 20px
     bindsym Shift+j resize grow height 20px
-    
+
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
