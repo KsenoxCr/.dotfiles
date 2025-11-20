@@ -99,7 +99,7 @@ bindsym Shift+Ctrl+y exec $fileManager
 bindsym Ctrl+Shift+i exec $signal
 # bindsym Shift+Alt+t floating toggle
 bindsym Ctrl+Shift+q exec $terminal
-bindsym Ctrl+Shift+q exec $dbclient
+bindsym Ctrl+Shift+x exec $dbclient
 bindsym $mod+up splith
 bindsym $mod+right splitv
 

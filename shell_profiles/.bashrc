@@ -140,6 +140,7 @@ fi
 alias nv=nvim
 alias fd=fdfind
 alias lg=lazygit
+alias swrl="swaymsg reload"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
