@@ -9,19 +9,18 @@ output * bg ~/wallpapers/pepe_windows.jpg fill
 ### Variables
 set $mod Mod4
 set $terminal kitty
-set $fileManager ~/work/scripting/bash/open_app.sh dolphin
-set $pwdMngr ~/work/scripting/bash/open_app.sh Bitwarden
-set $notes ~/work/scripting/bash/open_app.sh obsidian
+set $fileManager dolphin
+set $pwdMngr Bitwarden
 set $browser chromium
-set $chatbots ~/work/scripting/bash/open_app.sh firefox
-set $email ~/work/scripting/bash/open_app.sh thunderbird
+set $chatbots firefox
+set $email thunderbird
 set $screenShot grim -g "$(slurp)" - | wl-copy
 set $mainMonitorSS grim -o DP-1 - | wl-copy
 set $lockScreen swaylock -i ~/wallpapers/pepe_windows.jpg
 set $menu rofi -show drun -theme Indego
-set $prompts rofi -modi "clip:~/work/scripting/bash/file2clip.sh" -show clip -theme Indego
+set $prompts rofi -modi "clip:~/scripting/bash/file2clip.sh" -show clip -theme Indego
 set $resmon kitty btop
-set $discord ~/work/scripting/bash/open_app.sh discord
+set $signal signal-desktop
 
 ### Autostart
 exec_always autotiling
@@ -96,7 +95,7 @@ for_window [title=".*"] inhibit_idle fullscreen
 bindsym Shift+Alt+s exec $mainMonitorSS
 bindsym Ctrl+Shift+Alt+s exec $screenShot
 bindsym Shift+Ctrl+y exec $fileManager
-bindsym Ctrl+Shift+i exec $discord
+bindsym Ctrl+Shift+i exec $signal
 bindsym Shift+Alt+t floating toggle
 bindsym Ctrl+Shift+q exec $terminal
 bindsym Alt+Shift+q exec $terminal
@@ -208,7 +207,6 @@ bindsym $mod+Ctrl+Shift+j resize grow height 20px
 bindsym Shift+Ctrl+b exec $browser
 bindsym Shift+Ctrl+m exec $email
 bindsym Shift+Ctrl+p exec $pwdMngr
-bindsym Shift+Ctrl+n exec $notes
 # bindsym Alt+Shift+t floating toggle
 
 # Multimedia keys
