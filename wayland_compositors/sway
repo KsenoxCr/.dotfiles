@@ -21,6 +21,7 @@ set $menu rofi -show drun -theme Indego
 set $prompts rofi -modi "clip:~/scripting/bash/file2clip.sh" -show clip -theme Indego
 set $resmon kitty btop
 set $signal signal-desktop
+set $dbclient beekeeper-studio
 
 ### Autostart
 exec_always autotiling
@@ -96,9 +97,9 @@ bindsym Shift+Alt+s exec $mainMonitorSS
 bindsym Ctrl+Shift+Alt+s exec $screenShot
 bindsym Shift+Ctrl+y exec $fileManager
 bindsym Ctrl+Shift+i exec $signal
-bindsym Shift+Alt+t floating toggle
+# bindsym Shift+Alt+t floating toggle
 bindsym Ctrl+Shift+q exec $terminal
-bindsym Alt+Shift+q exec $terminal
+bindsym Ctrl+Shift+q exec $dbclient
 bindsym $mod+up splith
 bindsym $mod+right splitv
 

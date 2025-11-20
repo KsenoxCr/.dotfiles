@@ -2,7 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-
 if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
     exec sway
 fi
@@ -16,6 +15,7 @@ if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > ~/.ssh-agent-env
 fi
 
+export ELECTRON_OZONE_PLATFORM_HINT=wayland
 export PATH=$PATH:/usr/sbin
 export PATH="$HOME/.local/share/bob/v0.11.0/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -23,6 +23,7 @@ export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 export PATH=$PATH:/usr/sbin
 export EDITOR=nvim
 export MANPAGER=nvim
+export PATH="/opt/Beekeeper Studio:$PATH"
 
 # If not running interactively, don't do anything
 case $- in
