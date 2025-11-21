@@ -4,7 +4,7 @@
 ### Outputs (Monitors)
 output DP-1 mode 1920x1080@164.920Hz position 0 0
 output HDMI-A-1 mode 1920x1080@60Hz position -1920 0
-output * bg ~/wallpapers/pepe_windows.jpg fill
+output * bg ~/wallpapers/space.jpg fill
 
 ### Variables
 set $mod Mod4
@@ -16,7 +16,7 @@ set $chatbots firefox
 set $email thunderbird
 set $screenShot grim -g "$(slurp)" - | wl-copy
 set $mainMonitorSS grim -o DP-1 - | wl-copy
-set $lockScreen swaylock -i ~/wallpapers/pepe_windows.jpg
+set $lockScreen swaylock -i ~/wallpapers/space.jpg
 set $menu rofi -show drun -theme Indego
 set $prompts rofi -modi "clip:~/scripting/bash/file2clip.sh" -show clip -theme Indego
 set $resmon kitty btop
@@ -108,6 +108,8 @@ bindsym $mod+p layout toggle split
 bindsym $mod+j split toggle
 
 # Swap windows (Sway uses marks for complex swapping)
+bindsym Shift+Ctrl+m mark a
+bindsym Shift+Ctrl+p swap container with mark a
 bindsym $mod+Shift+d move right
 bindsym $mod+Shift+a move left
 bindsym $mod+Shift+w move up
@@ -206,8 +208,8 @@ bindsym $mod+Ctrl+Shift+j resize grow height 20px
 
 # Applications
 bindsym Shift+Ctrl+b exec $browser
-bindsym Shift+Ctrl+m exec $email
-bindsym Shift+Ctrl+p exec $pwdMngr
+# bindsym Shift+Ctrl+m exec $email
+# bindsym Shift+Ctrl+p exec $pwdMngr
 # bindsym Alt+Shift+t floating toggle
 
 # Multimedia keys
@@ -227,7 +229,7 @@ bindsym --whole-window $mod+button1 floating toggle
 bindsym --whole-window $mod+button2 kill
 bindsym --whole-window $mod+button3 resize
 
-# Bar
-bar {
-    swaybar_command waybar
-}
+# # Bar
+# bar {
+#     swaybar_command waybar
+# }

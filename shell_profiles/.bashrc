@@ -138,6 +138,7 @@ fi
 ## Aliases
 
 alias nv=nvim
+alias rm=trash
 alias fd=fdfind
 alias lg=lazygit
 alias swrl="swaymsg reload"
