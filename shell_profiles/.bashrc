@@ -143,6 +143,8 @@ alias fd=fdfind
 alias lg=lazygit
 alias swrl="swaymsg reload"
 alias autopush="~/scripting/bash/gitpush.sh"
+alias gn="~/scripting/bash/nightly_backup.sh"
+alias rlbr=". ~/.bashrc"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
