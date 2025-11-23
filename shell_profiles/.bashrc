@@ -138,14 +138,13 @@ fi
 ## Aliases
 
 alias nv=nvim
-alias rm=trash
+alias th=trash
 alias fd=fdfind
 alias lg=lazygit
 alias swrl="swaymsg reload"
 alias autopush="~/scripting/bash/gitpush.sh"
 alias gn="~/scripting/bash/nightly_backup.sh"
 alias rlbr=". ~/.bashrc"
-alias rsnm="sudo systemctl restart NetworkManager"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
