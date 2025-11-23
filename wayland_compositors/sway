@@ -38,9 +38,14 @@ input type:keyboard {
     repeat_rate 25
 }
 
+
 input type:pointer {
     accel_profile flat
     pointer_accel -0.3
+}
+
+input "2821:6659:ASUSTeK_TUF_GAMING_M4_AIR" {
+    scroll_factor 0
 }
 
 input type:touchpad {
